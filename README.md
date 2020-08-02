@@ -3,17 +3,17 @@ Heart disease or Cardiovascular disease is one of the biggest causes of motality
 following link:
 https://archive.ics.uci.edu/ml/datasets/Heart+Disease
 
-The following models are trained using the collected data.
-• SVM
-• Naive Bayes
-• Logistic Regression
-• Decision Tree
-• Random Forest
-• Extreme Gradient Boost
-• Light Gradient Boost
+The following models are trained using the collected data. <br>
+• SVM<br>
+• Naive Bayes<br>
+• Logistic Regression<br>
+• Decision Tree<br>
+• Random Forest<br>
+• Extreme Gradient Boost<br>
+• Light Gradient Boost<br>
 
-The following methods are applied:
-• KNN imputer has been applied to fill the missing values of the data.
-• 10 most important features are selected using embeded feature selection (e.g., Extra Tree) and investigating correlation.
-• The top features are used to train the aforementioned models.
-• The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart diease vs no heart disease.
+The following techniques are applied:<br>
+• KNN imputer has been applied to fill the missing values of the data.<br>
+• 10 most important features are selected using embeded feature selection (e.g., Extra Tree) and investigating correlation.<br>
+• The top features are used to train the aforementioned models.<br>
+• The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart diease vs no heart disease.<br>
