@@ -14,6 +14,6 @@ The following models are trained using the collected data. <br>
 
 The following techniques are applied:<br>
 • KNN imputer has been applied to fill the missing values of the data.<br>
-• 10 most important features are selected using embeded feature selection (e.g., Extra Tree) and investigating correlation.<br>
+• 10 most important features are selected using embeded feature selection (e.g., Extra Tree) and by investigating correlation.<br>
 • The top features are used to train the aforementioned models.<br>
 • The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart diease vs no heart disease.<br>
