@@ -17,3 +17,6 @@ The following techniques are applied:<br>
 • 10 most important features are selected using embedded feature selection (e.g., Extra Tree) and by investigating correlation.<br>
 • The top features are used to train the aforementioned models.<br>
 • The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart disease vs no heart disease.<br>
+
+# Data:
+Please check Cleveland.csv for the training data and for the feature information please check heart-disease.names
