@@ -21,10 +21,12 @@ The following techniques are applied:<br>
 # Data:
 Please check Cleveland.csv for the training data and for the feature information please check heart-disease.names
 
+
+### Selected Features
+<img src="selected_features.PNG" width="70%">
+### Features Correlation
+<img src="correlation.PNG" width="80%">
+
 # Performance:
-Selected Features
-<img src="selected_features.PNG" width="60%">
-Feature Correlation 
-<img src="correlation.PNG" width="60%">
-<img src="performance_table.PNG" width="60%">
-<img src="performance_bar.PNG" width="60%">
+<img src="performance_table.PNG" width="50%">
+<img src="performance_bar.PNG" width="80%">
