@@ -26,8 +26,11 @@ Please check Cleveland.csv for the training data and for the feature information
 <img src="selected_features.PNG" width="70%">
 
 ### Features Correlation
-<img src="correlation.PNG" width="80%">
+<img src="correlation.PNG" width="100%">
 
 # Performance:
 <img src="performance_table.PNG" width="40%">
-<img src="performance_bar.PNG" width="80%">
+<img src="performance_bar.PNG" width="70%">
+
+# How to run:
+Please check Heart_Disease_Prediction.ipynb for the detailed analysis.
