@@ -24,6 +24,7 @@ Please check Cleveland.csv for the training data and for the feature information
 # Features:
 ### Selected Features
 <img src="selected_features.PNG" width="70%">
+
 ### Features Correlation
 <img src="correlation.PNG" width="80%">
 
