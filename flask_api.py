@@ -55,7 +55,7 @@ def predict_heart_disease():
         in: query
         type: number
         required: true
-      - name: Angima
+      - name: Angina
         in: query
         type: number
         required: true
@@ -86,13 +86,13 @@ def predict_heart_disease():
     rbp = request.args.get('Resting Blood Pressure')
     sc = request.args.get('Serum Cholestrol')
     max_hr = request.args.get('Max Heart Rate')
-    angima = request.args.get('Angima')
+    angina = request.args.get('Angina')
     st_rest = request.args.get('ST Rest')
     peak_st = request.args.get('Peak ST')
     mv = request.args.get('Major vessels')
     thal = request.args.get('Thal')
     
-    model_input = scaler.transform([[age, cp, rbp, sc, max_hr, angima, st_rest, peak_st, mv, thal]])
+    model_input = scaler.transform([[age, cp, rbp, sc, max_hr, angina, st_rest, peak_st, mv, thal]])
     
     prediction = classifier.predict(model_input)
     

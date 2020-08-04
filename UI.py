@@ -11,7 +11,7 @@ import numpy as np
 import pickle
 import flasgger 
 from flasgger import Swagger
-
+from PIL import Image
 
 app = Flask(__name__)
 Swagger(app)
@@ -27,7 +27,7 @@ def welcome():
     return "welcome all"
 
 @app.route('/predict')
-def predict_heart_disease(age, cp, rbp, sc, max_hr, angima, st_rest, peak_st, mv, thal):
+def predict_heart_disease(age, cp, rbp, sc, max_hr, angina, st_rest, peak_st, mv, thal):
   
     """
     Predict Chances of Heart Disease.
@@ -82,7 +82,7 @@ def predict_heart_disease(age, cp, rbp, sc, max_hr, angima, st_rest, peak_st, mv
 
     """
     
-    model_input = scaler.transform([[age, cp, rbp, sc, max_hr, angima, st_rest, peak_st, mv, thal]])
+    model_input = scaler.transform([[age, cp, rbp, sc, max_hr, angina, st_rest, peak_st, mv, thal]])
     
     prediction = classifier.predict(model_input)
     
@@ -121,28 +121,68 @@ def predict_heart_disease_file():
 
 
 def main():
-    st.title("Predict Heart Disease")
+  
     html_temp="""
-    <div style ="background-color: tomato; padding:10px">
-    <h2 style="color:white; text-align:center;>Streamlit Heart Disease Predictor App </h2>
+    <div style ="background-color: #E94F1C; padding:10px">
+    <h2 style="color:white; text-align:center;">Heart Disease Predictor</h2>
     </div>
     """
+    # html_temp = """
+    # <div style="background-color:tomato;padding:10px">
+    # <h2 style="color:white;text-align:center;">Heart Disease Predictor</h2>
+    # </div>
+    # """
     st.markdown(html_temp, unsafe_allow_html=True)
-    age = st.text_input('Age', 'Type Here')
-    cp = st.text_input('Chest Pain', 'Type Here')
-    rbp = st.text_input('Resting Blood Pressure', 'Type Here')
-    sc = st.text_input('Serum Cholestrol', 'Type Here')
-    max_hr = st.text_input('Max Heart Rate', 'Type Here')
-    angima = st.text_input('Angima', 'Type Here')
-    st_rest = st.text_input('ST Rest', 'Type Here')
-    peak_st = st.text_input('Peak ST', 'Type Here')
-    mv = st.text_input('Major vessels', 'Type Here')
-    thal = st.text_input('Thal', 'Type Here')
+    image = Image.open('bc.jpg')
+    st.image(image,use_column_width=True)
+    st.subheader("Please fill up the following information:")
+    age = st.text_input('Age', type='default')
+    cp_text = st.selectbox('Chest pain type',('Typical angina (1)', 'Atypical angina (2)', 'Non-anginal pain (3)', 'Asymtoptic (4)'))
     
+    if cp_text == "Typical angina (1)":
+        cp=1
+    elif cp_text == "Atypical angina (2)":
+        cp=2
+    elif cp_text == "Non-anginal pain (3)":
+        cp=3
+    else:
+        cp=4
+        
+    rbp = st.text_input('Resting blood pressure in mmHg', type='default')
+    
+    sc = st.text_input('Serum cholestrol in mg/dl', type='default')
+    
+    max_hr = st.text_input('Max heart rate', type='default')
+    
+    angina_text = st.selectbox('Exercised induced angina', ('Yes (1)', 'No (0)'))
+    if angina_text == "Yes (1)":
+        angina = 1
+    else:
+        angina = 0
+    
+    st_rest = st.text_input('ST depression induced by exercise relative to rest', type='default')
+    
+    peak_st_text = st.selectbox('Peak exercise ST segment', ('Upsloping (1)', 'Flat (2)', 'Downsloping (3)'))
+    if peak_st_text == "Upsloping (1)":
+        peak_st = 1
+    elif peak_st_text == "Flat (2)":
+        peak_st = 2
+    else:
+        peak_st = 3
+    
+    mv = st.radio('Number of major vessels (0–3) colored by flourosopy', (0,1,2,3))
+    
+    thal_text = st.selectbox('Thalassemia', ('Normal (3)', 'Fixed defect (6)', 'Reversible defect (7)'))
+    if thal_text == "Normal (3)":
+        thal = 3
+    elif thal_text == "Fixed defect (6)":
+        thal = 6
+    else:
+        thal = 7 
     result=""
     
     if st.button("Predict"):
-        result = predict_heart_disease(age, cp, rbp, sc, max_hr, angima, st_rest, peak_st, mv, thal)
+        result = predict_heart_disease(age, cp, rbp, sc, max_hr, angina, st_rest, peak_st, mv, thal)
         if int(result[-3]) == 1:
             st.error("Yoh have higher chances of having a heart disease.".format(result))
         else:
