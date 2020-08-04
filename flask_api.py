@@ -117,7 +117,9 @@ def predict_heart_disease_file():
         
     """
     df_test = pd.read_csv(request.files.get("file"))
-    prediction = classifier.predict(df_test)
+    
+    prediction = classifier.predict(scaler.transform(df_test))
+
     return str(list(prediction))
 
 
