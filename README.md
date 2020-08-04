@@ -21,7 +21,9 @@ The following techniques are applied:<br>
 Finally, a web api (flask-api, flasgger) along with an UI (using streamlit) is developed to interact with the best model. Users can directly input information through the UI and check to see the chances of having a heart disease.
 
 <img src="UI.gif" width="100%">
-<img src="API.PNG" width="100%">
+
+<img src="API.PNG" width="70%">
+
 # Data:
 Please check Cleveland.csv for the training data and for the detailed feature information please check 'heart-disease.names' file.
 
