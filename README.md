@@ -18,6 +18,10 @@ The following techniques are applied:<br>
 • The top features are used to train the aforementioned models.<br>
 • The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart disease vs no heart disease.<br>
 
+Finally, a web api (flask-api) along with an UI is developed to interact with the best model. Users can directly input information through the UI and can see the chances of having a heart disease.
+
+<img src="UI.gif" width="100%">
+
 # Data:
 Please check Cleveland.csv for the training data and for the detailed feature information please check 'heart-disease.names' file.
 
