@@ -1,4 +1,4 @@
-﻿Age,Sex,Chest Pain,Resting Blood Pressure,Serum Cholestrol,Fasting Blood Sugar,Resting ECG,Max Heart Rate,Angima,ST Rest,Peak ST,Major vessels,Thal,Heart Disease
+﻿age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,Heart Disease
 63,1,1,145,233,1,2,150,0,2.3,3,0,6,0
 67,1,4,160,286,0,2,108,1,1.5,2,3,3,2
 67,1,4,120,229,0,2,129,1,2.6,2,2,7,1
