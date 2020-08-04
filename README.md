@@ -19,7 +19,7 @@ The following techniques are applied:<br>
 • The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart disease vs no heart disease.<br>
 
 # Data:
-Please check Cleveland.csv for the training data and for the feature information please check heart-disease.names
+Please check Cleveland.csv for the training data and for the detailed feature information please check 'heart-disease.names' file.
 
 # Features:
 ### Selected Features
