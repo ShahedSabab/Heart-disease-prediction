@@ -38,3 +38,5 @@ Please check Cleveland.csv for the training data and for the detailed feature in
 
 # How to run:
 Please check Heart_Disease_Prediction.ipynb for the detailed analysis.
+To Run the UI simply run the following commands in the terminal/cmd.
+> streamlit run UI.py
