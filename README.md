@@ -43,6 +43,7 @@ Please check Cleveland.csv for the training data and for the detailed feature in
 
 2. To build and run the docker image of the API simply run the following commands:
 > docker build -t heart_disease_api
+
 > docker run -p 8000:8000 heart_disease_api
 
 3. To run the API manually run the following commands from the cmd/terminal:
