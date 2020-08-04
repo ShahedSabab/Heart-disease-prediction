@@ -47,9 +47,11 @@ Please check Cleveland.csv for the training data and for the detailed feature in
 
 3. To run the API manually run the following commands from the cmd/terminal:
 > python flask_api.py
+
 go to this link from the browser: http://127.0.0.1:5000/apidocs
 
 3.To Run the UI simply run the following commands in the terminal/cmd.
 > streamlit run UI.py
+
 go to this link from the browser: http://localhost:8501/
 
