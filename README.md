@@ -21,7 +21,7 @@ The following techniques are applied:<br>
 Finally, a web api (flask-api, flasgger) along with an UI (using streamlit) is developed to interact with the best model. Users can directly input information through the UI and check to see the chances of having a heart disease.
 
 <img src="UI.gif" width="100%">
-
+<img src="API.PNG" width="100%">
 # Data:
 Please check Cleveland.csv for the training data and for the detailed feature information please check 'heart-disease.names' file.
 
@@ -37,6 +37,8 @@ Please check Cleveland.csv for the training data and for the detailed feature in
 <img src="performance_bar.PNG" width="70%">
 
 # How to run:
-Please check Heart_Disease_Prediction.ipynb for the detailed analysis.
-To Run the UI simply run the following commands in the terminal/cmd.
+1. Please check Heart_Disease_Prediction.ipynb for the detailed analysis.
+2. 
+3.To Run the UI simply run the following commands in the terminal/cmd.
 > streamlit run UI.py
+4.To interact with the API interface run the 'flask-api.py' file and go to the following link from a web browser.
