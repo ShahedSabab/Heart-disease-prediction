@@ -18,7 +18,7 @@ The following techniques are applied:<br>
 • The top features are used to train the aforementioned models.<br>
 • The best model achieved 90% accuracy (f1 = 0.90) in classifying patients with heart disease vs no heart disease.<br>
 
-Finally, a web api (flask-api, flasgger) along with an UI (using streamlit) is developed to interact with the best model. Users can directly input information through the UI and check to see the chances of having a heart disease.
+Finally, a web api (flask-api, flasgger) along with a UI (using streamlit) is developed to interact with the best model. Users can directly input information through the UI and check to see the chances of having a heart disease.
 
 <img src="UI.gif" width="100%">
 
