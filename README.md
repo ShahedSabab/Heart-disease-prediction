@@ -22,7 +22,7 @@ Finally, a web api (flask-api, flasgger) along with an UI (using streamlit) is d
 
 <img src="UI.gif" width="100%">
 
-<img src="API.PNG" width="70%">
+<img src="API.PNG" width="80%">
 
 # Data:
 Please check Cleveland.csv for the training data and for the detailed feature information please check 'heart-disease.names' file.
@@ -39,8 +39,17 @@ Please check Cleveland.csv for the training data and for the detailed feature in
 <img src="performance_bar.PNG" width="70%">
 
 # How to run:
-1. Please check Heart_Disease_Prediction.ipynb for the detailed analysis.
-2. 
+1. Please check Heart_Disease_Prediction.ipynb for the detailed analysis of different models.
+
+2. To build and run the docker image of the API simply run the following commands:
+> docker build -t heart_disease_api
+> docker run -p 8000:8000 heart_disease_api
+
+3. To run the API manually run the following commands from the cmd/terminal:
+> python flask_api.py
+go to this link from the browser: http://127.0.0.1:5000/apidocs
+
 3.To Run the UI simply run the following commands in the terminal/cmd.
 > streamlit run UI.py
-4.To interact with the API interface run the 'flask-api.py' file and go to the following link from a web browser.
+go to this link from the browser: http://localhost:8501/
+
